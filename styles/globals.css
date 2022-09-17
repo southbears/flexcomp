@@ -1,8 +1,10 @@
 
 .recharts-bar-rectangle {
-  opacity: 0.9;
+  /* opacity: 0.9; */
 }
 
 html, body {
-  background: var(--chakra-colors-blue-800) !important;
+  /* background: var(--chakra-colors-blue-800) !important; */
+  background: linear-gradient(to left top, var(--chakra-colors-blue-600), var(--chakra-colors-blue-900)) !important;
+  min-height: 100vh !important;
 }
