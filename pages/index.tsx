@@ -20,7 +20,7 @@ const percentFormat = new Intl.NumberFormat('en-US', {
 
 const OfferPage: NextPage = () => {
   const router = useRouter();
-  const offer = useMemo(() => getOffer(router.query.offerId as string), [router.query.offerId]);
+  const offer = useMemo(() => getOffer(router.query.offer as string), [router.query.offer]);
 
   const [value, setValue] = useState(offer.default);
   const [growthRate, setGrowthRate] = useState((offer.growthProjections.find((p) => p.default) ?? offer.growthProjections[0])?.rate);
@@ -35,7 +35,7 @@ const OfferPage: NextPage = () => {
 
   const [modalOpen, setModalOpen] = useState(false);
 
-  if (!router.query.offerId) return null;
+  if (!router.query.offer) return null;
   return (
     <>
       <Container maxW='container.lg' mt={24}>
